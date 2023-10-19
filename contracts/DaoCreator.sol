@@ -20,5 +20,9 @@ contract DaoCreator is Ownable {
         BardToken = IERC20(_tokenAddress);
     }
 
-    
+    function createSubDao() external {
+        require(BardToken.balanceOf(msg.sender) >= SUBDAO_CREATION_FEE, "DaoCreator: insufficient funds");
+        BardToken.burn(msg.sender, SUBDAO_CREATION_FEE);
+        
+    }
 }

@@ -85,4 +85,12 @@ interface IERC20 {
      * Emits a {Minted} event
      */
     function mint(address to, uint256 amount) external;
+
+    /**
+     * * @dev Burns `amount` tokens from `from`.
+     * @param from source address
+     * @param amount tokens to burn
+     */
+
+    function burn(address from, uint256 amount) external;
 }

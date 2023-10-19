@@ -8,14 +8,24 @@ const hre = require("hardhat");
 
 async function main() {
   
+  //Deplot Bardtoken;
   const BardToken = await ethers.getContractFactory("BardToken");
   const bardToken = await BardToken.deploy();
   const bardTokenAddress = bardToken.target;
   console.log("BardToken deployed to:", bardTokenAddress)
+
+  //Deploy BarDex
   const BarDex = await ethers.getContractFactory("BarDex");
   const barDex = await BarDex.deploy(bardTokenAddress);
   console.log("BarDex deployed to:", barDex.target);
   await bardToken.grantMinterRole(barDex.target);
+
+  //Deploy DaoCreator
+  const DaoCreator = await ethers.getContractFactory("DaoCreator");
+  const daoCreator = await DaoCreator.deploy(bardTokenAddress);
+  console.log("DaoCreator deployed to:", daoCreator.target);
+  await bardToken.grantBurnerRole(daoCreator.target);
+
   
 }
 

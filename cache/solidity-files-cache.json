@@ -571,42 +571,6 @@
         "DaoCreator"
       ]
     },
-    "/Users/fribas/Projects/bardao/smart-contracts/contracts/Lock.sol": {
-      "lastModificationDate": 1697198958509,
-      "contentHash": "05a8022779b5f6c4640cc326bce22110",
-      "sourceName": "contracts/Lock.sol",
-      "solcConfig": {
-        "version": "0.8.20",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.9"
-      ],
-      "artifacts": [
-        "Lock"
-      ]
-    },
     "/Users/fribas/Projects/bardao/smart-contracts/contracts/BarDex.sol": {
       "lastModificationDate": 1697592746115,
       "contentHash": "33250ba43a1e5a795575fbeeb4b51a39",
@@ -649,8 +613,8 @@
       ]
     },
     "/Users/fribas/Projects/bardao/smart-contracts/contracts/IERC20.sol": {
-      "lastModificationDate": 1697587232024,
-      "contentHash": "3ef3beae4ae60285f49f784511c3a99d",
+      "lastModificationDate": 1697595289230,
+      "contentHash": "34d62b3a4681802811cf0a7265de3fba",
       "sourceName": "contracts/IERC20.sol",
       "solcConfig": {
         "version": "0.8.20",
@@ -678,7 +642,7 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.8.20"
+        "0.8.20"
       ],
       "artifacts": [
         "IERC20"
